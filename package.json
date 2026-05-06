@@ -1,0 +1,29 @@
+{
+  "name": "create-rag-app",
+  "version": "0.1.0",
+  "private": true,
+  "description": "RAG chatbot over your business docs. Next.js + pgvector + OpenAI + citations. Deploy to Vercel.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "ingest": "tsx scripts/ingest.ts",
+    "db:setup": "psql $DATABASE_URL -f schema.sql"
+  },
+  "dependencies": {
+    "next": "^16.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "openai": "^4.60.0",
+    "pg": "^8.13.0",
+    "pdf-parse": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/pg": "^8.11.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0"
+  }
+}
